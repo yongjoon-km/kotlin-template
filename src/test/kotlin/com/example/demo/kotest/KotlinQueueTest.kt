@@ -8,15 +8,10 @@ import io.kotest.matchers.types.shouldBeTypeOf
 import java.util.Arrays
 
 class KotlinQueueTest : FunSpec({
-    val queue: KotlinQueue = KotlinQueue()
+    val queue = KotlinQueue()
 
     afterTest {
         queue.clean()
-        println("after test1")
-    }
-
-    afterTest {
-        println("after test2")
     }
 
     test("push elements in the queue") {
@@ -44,17 +39,6 @@ class KotlinQueueTest : FunSpec({
 
     test("return queue as list") {
         queue.asList().shouldBeInstanceOf<List<Int>>()
-    }
-
-    test("shouldBeTypeOf") {
-        val x = 1
-        x.shouldBeTypeOf<Int>()
-    }
-
-    test("shouldBeInstanceOf") {
-        val x = 1
-        x.shouldBeInstanceOf<Int>()
-        x.shouldBeInstanceOf<Any>() // inheritance OK
     }
 
 })
