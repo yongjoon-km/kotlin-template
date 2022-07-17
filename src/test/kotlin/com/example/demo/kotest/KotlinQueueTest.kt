@@ -44,18 +44,6 @@ class KotlinQueueTest : FunSpec({
 
     test("return queue as list") {
         queue.asList().shouldBeInstanceOf<List<Int>>()
-        val x: List<Int> = listOf(1,2,3)
-        println(x::class)
-        println(x::class.java)
-        println(x.javaClass)
-        println(x.javaClass.kotlin)
-        println(ArrayList::class)
-        println(java.util.ArrayList::class)
-        println(IntArray::class)
-        println(Array<Int>::class)
-        println(Arrays::class)
-        println()
-//        x.shouldBeTypeOf<>()
     }
 
     test("shouldBeTypeOf") {
